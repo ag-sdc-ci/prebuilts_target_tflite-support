@@ -1,0 +1,49 @@
+// Auto-generated prebuilt Blueprint for prebuilts_target_tflite-support
+// Staged from Extractive APEX package: ext-tflite-support (org.blisslabs.ag.ext.tflite-support)
+
+package {
+    default_applicable_licenses: ["external_tflite-support_license"],
+}
+
+license {
+    name: "external_tflite-support_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MIT",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "tflite_support",
+    srcs: ["lib/libtflite_support.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "tflite_support_libz",
+    srcs: ["lib/libtflite_support_libz.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+cc_prebuilt_library_static {
+    name: "tflite_support_task_core_proto",
+    srcs: ["lib/libtflite_support_task_core_proto.a"],
+    export_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
